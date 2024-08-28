@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Message for You</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #444;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1em;
+            background-color: #008cba;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #005f75;
+        }
+
+        #proposal {
+            display: none;
+            margin-top: 30px;
+        }
+
+        #response {
+            display: none;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>A Special Message for You</h1>
+    <p>I’ve been thinking about this moment for a while, and I wanted to express it in a way that’s uniquely us. So, I created this space just for you.</p>
+
+    <button onclick="revealProposal()">Click to Reveal</button>
+
+    <div id="proposal">
+        <p>Will you make me the happiest person in the world? Will you marry me?</p>
+        <button onclick="showResponse('yes')">Yes</button>
+        <button onclick="showResponse('no')">No</button>
+    </div>
+
+    <div id="response"></div>
+
+    <script>
+        function revealProposal() {
+            document.getElementById('proposal').style.display = 'block';
+        }
+
+        function showResponse(answer) {
+            const responseDiv = document.getElementById('response');
+            if (answer === 'yes') {
+                responseDiv.innerHTML = "<p>You’ve made my dreams come true! I can’t wait to start this journey with you.</p>";
+            } else {
+                responseDiv.innerHTML = "<p>I understand, and I’ll always cherish our time together.</p>";
+            }
+            responseDiv.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
